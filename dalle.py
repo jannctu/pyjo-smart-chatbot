@@ -1,6 +1,10 @@
 import openai
+import os
+from dotenv import load_dotenv
 
-openai.api_key = "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"
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_KEY")
 
 
 def generate_image(prompt):
